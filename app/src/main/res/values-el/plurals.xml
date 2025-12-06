@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_string">
+        <item quantity="zero">Κενη Λίστα</item>
+        <item quantity="one">%s</item>
+        <item quantity="many">-%s</item>
+        <item quantity="other">Πρόβλημα</item>
+    </plurals>
+</resources>

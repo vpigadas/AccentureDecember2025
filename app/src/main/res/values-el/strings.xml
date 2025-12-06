@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_second">Δεύερη οθόνη</string>
+    <string name="next">Επόμενο</string>
+    <string name="previous">Προηγούμενο</string>
+</resources>
