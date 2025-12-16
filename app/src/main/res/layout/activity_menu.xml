@@ -15,10 +15,8 @@
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="1"
+        app:spanCount="@integer/span_count"
         tools:itemCount="5"
-        tools:layout_editor_absoluteX="-58dp"
-        tools:layout_editor_absoluteY="0dp"
         tools:listitem="@layout/holder_first_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

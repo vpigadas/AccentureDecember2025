@@ -2,4 +2,5 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="padding_login_sample">36dp</dimen>
+    <integer name="span_count">1</integer>
 </resources>
