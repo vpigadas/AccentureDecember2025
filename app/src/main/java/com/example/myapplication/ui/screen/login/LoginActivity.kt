@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityLoginBinding
+import com.example.myapplication.ui.screen.menu.MenuActivity
 import com.example.myapplication.ui.screen.register.RegisterActivity
 import com.example.myapplication.ui.screen.register.RegisterV2
 
@@ -35,6 +36,8 @@ class LoginActivity : AppCompatActivity() {
         _binding.loginBtnThree.setOnClickListener {
             _binding.loginTxtSample.visibility = View.VISIBLE
 
+            val intent = Intent(this@LoginActivity, MenuActivity::class.java)
+            startActivity(intent)
         }
 
         _binding.loginBtnFour.setOnClickListener {
