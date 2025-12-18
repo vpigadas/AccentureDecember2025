@@ -3,19 +3,16 @@ package com.example.myapplication.ui.screen.login
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityLoginBinding
 import com.example.myapplication.ui.screen.menu.MenuActivity
+import com.example.myapplication.ui.screen.network.NetworkActivity
 import com.example.myapplication.ui.screen.register.RegisterActivity
 import com.example.myapplication.ui.screen.register.RegisterV2
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var _binding : ActivityLoginBinding
+    private lateinit var _binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +39,11 @@ class LoginActivity : AppCompatActivity() {
 
         _binding.loginBtnFour.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterV2::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnOneToThree.setOnClickListener {
+            val intent = Intent(this@LoginActivity, NetworkActivity::class.java)
             startActivity(intent)
         }
     }
