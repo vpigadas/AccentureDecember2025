@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityLoginBinding
+import com.example.myapplication.ui.screen.fragments.MyFragmentActivity
+import com.example.myapplication.ui.screen.list.MyListActivity
 import com.example.myapplication.ui.screen.menu.MenuActivity
 import com.example.myapplication.ui.screen.network.NetworkActivity
 import com.example.myapplication.ui.screen.register.RegisterActivity
@@ -44,6 +46,16 @@ class LoginActivity : AppCompatActivity() {
 
         _binding.loginBtnOneToThree.setOnClickListener {
             val intent = Intent(this@LoginActivity, NetworkActivity::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnNetworkWithList.setOnClickListener {
+            val intent = Intent(this@LoginActivity, MyListActivity::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnFragments.setOnClickListener {
+            val intent = Intent(this@LoginActivity, MyFragmentActivity::class.java)
             startActivity(intent)
         }
     }

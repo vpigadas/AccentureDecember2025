@@ -11,4 +11,9 @@ interface ApiService {
     @Headers("Accept: application/json")
     fun getAllDogs(): Call<JsonElement>
 
+
+    @GET("breeds")
+    @Headers("Accept: application/json")
+    fun getAllDogsV2(): Call<JsonResponse>
+
 }
