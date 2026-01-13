@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ui.screen.storage.database.DbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.screen.storage.StorageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.screen.fragments.MyFragmentActivity"
             android:exported="false" />
         <activity

@@ -11,6 +11,8 @@ import com.example.myapplication.ui.screen.menu.MenuActivity
 import com.example.myapplication.ui.screen.network.NetworkActivity
 import com.example.myapplication.ui.screen.register.RegisterActivity
 import com.example.myapplication.ui.screen.register.RegisterV2
+import com.example.myapplication.ui.screen.storage.StorageActivity
+import com.example.myapplication.ui.screen.storage.database.DbActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -56,6 +58,15 @@ class LoginActivity : AppCompatActivity() {
 
         _binding.loginBtnFragments.setOnClickListener {
             val intent = Intent(this@LoginActivity, MyFragmentActivity::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnStroage.setOnClickListener {
+            val intent = Intent(this@LoginActivity, StorageActivity::class.java)
+            startActivity(intent)
+        }
+        _binding.loginBtnDatabase.setOnClickListener {
+            val intent = Intent(this@LoginActivity, DbActivity::class.java)
             startActivity(intent)
         }
     }
