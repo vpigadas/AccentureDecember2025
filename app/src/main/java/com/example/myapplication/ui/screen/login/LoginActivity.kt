@@ -13,6 +13,7 @@ import com.example.myapplication.ui.screen.register.RegisterActivity
 import com.example.myapplication.ui.screen.register.RegisterV2
 import com.example.myapplication.ui.screen.storage.StorageActivity
 import com.example.myapplication.ui.screen.storage.database.DbActivity
+import com.example.myapplication.ui.screen.viewmodel.ViewModelActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -67,6 +68,11 @@ class LoginActivity : AppCompatActivity() {
         }
         _binding.loginBtnDatabase.setOnClickListener {
             val intent = Intent(this@LoginActivity, DbActivity::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnViewmodel.setOnClickListener {
+            val intent = Intent(this@LoginActivity, ViewModelActivity::class.java)
             startActivity(intent)
         }
     }
