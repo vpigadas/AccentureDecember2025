@@ -13,17 +13,21 @@ class DbActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDbBinding
 
+    val appDbInstance:AppDbInstance = Room.databaseBuilder(this, AppDbInstance::class.java,"Database")
+        .allowMainThreadQueries()
+        .build()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDbBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-
-        val appDbInstance:AppDbInstance = Room.databaseBuilder(this, AppDbInstance::class.java,"Database")
-            .allowMainThreadQueries()
-            .build()
-
         appDbInstance.getUserDao().readAll()
+    }
+
+    override fun onStop() {
+        appDbInstance.close()
+        super.onStop()
     }
 }
