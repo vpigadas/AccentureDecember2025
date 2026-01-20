@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.screen.storage.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -29,6 +30,9 @@ interface UserDao {
 
     @Query("SELECT * FROM UserEntity")
     fun readAll() : List<UserEntity>
+
+    @Query("SELECT * FROM UserEntity")
+    fun streamReadAll() : LiveData<List<UserEntity>>
 
     @Query("SELECT * FROM UserEntity WHERE id = :id")
     fun readAll(id: Int) : List<UserEntity>

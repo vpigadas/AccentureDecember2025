@@ -14,12 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        tools:text="100"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/viewmodel_btn_decrease"
@@ -32,12 +32,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Space
-        android:layout_width="16dp"
         android:id="@+id/viewmodel_space"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="wrap_content" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/viewmodel_btn_increase"
@@ -47,5 +47,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/viewmodel_space" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewmodel_new_user"
+        app:layout_constraintBottom_toTopOf="@id/viewmodel_btn_increase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert User" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
