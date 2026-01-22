@@ -7,11 +7,13 @@ data class JsonResponse(
 data class JsonDataResponse(
     val id: String? = null,
     val type: String? = null
-){
+) {
 
     fun compareContent(obj: JsonDataResponse): Boolean = this.id == obj.id
 
     override fun toString(): String {
         return "id: $id, type: $type"
     }
+
+    fun equalsContent(newItem: JsonDataResponse): Boolean = this.id == newItem.id
 }

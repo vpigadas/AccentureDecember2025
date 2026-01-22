@@ -2,6 +2,7 @@ package com.example.myapplication.ui.screen.viewmodel
 
 import android.app.Application
 import android.os.Handler
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
@@ -31,8 +32,12 @@ class DatabaseViewModel(application: Application) : AndroidViewModel(application
 //            database.getUser().save(user)
 //        }
 
-        executor.execute {
-            database.getUser().save(user)
+        runCatching {
+            executor.execute {
+                database.getUser().save(user)
+            }
+        }.onFailure {
+            Log.e("DatabaseViewModel", "Error: ${it.message}",it)
         }
     }
 

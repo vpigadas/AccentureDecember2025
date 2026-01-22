@@ -112,4 +112,12 @@
 
         android:text="ViewModel Screen" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_viewmodel"
+
+        android:text="Sample App Screen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

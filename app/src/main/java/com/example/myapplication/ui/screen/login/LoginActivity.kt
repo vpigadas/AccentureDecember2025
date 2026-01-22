@@ -11,6 +11,7 @@ import com.example.myapplication.ui.screen.menu.MenuActivity
 import com.example.myapplication.ui.screen.network.NetworkActivity
 import com.example.myapplication.ui.screen.register.RegisterActivity
 import com.example.myapplication.ui.screen.register.RegisterV2
+import com.example.myapplication.ui.screen.sample.SampleActivity
 import com.example.myapplication.ui.screen.storage.StorageActivity
 import com.example.myapplication.ui.screen.storage.database.DbActivity
 import com.example.myapplication.ui.screen.viewmodel.ViewModelActivity
@@ -73,6 +74,11 @@ class LoginActivity : AppCompatActivity() {
 
         _binding.loginBtnViewmodel.setOnClickListener {
             val intent = Intent(this@LoginActivity, ViewModelActivity::class.java)
+            startActivity(intent)
+        }
+
+        _binding.loginBtnSample.setOnClickListener {
+            val intent = Intent(this@LoginActivity, SampleActivity::class.java)
             startActivity(intent)
         }
     }
