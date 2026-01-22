@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.myapplication.databinding.FragmentSampleBinding
@@ -18,8 +19,8 @@ class SampleFragment : Fragment() {
     private lateinit var binding: FragmentSampleBinding
 
     private val viewmodel: SampleFragmentViewmodel by viewModels()
-    private val parentViewmodel: SampleParentViewmodel by viewModels()
-    private val networkViewmodel: NetworkViewmodel by viewModels()
+    private val parentViewmodel: SampleParentViewmodel by activityViewModels()
+    private val networkViewmodel: NetworkViewmodel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +43,7 @@ class SampleFragment : Fragment() {
                 when (value) {
                     is JsonResponse -> {
                         viewmodel.adapter.submitList(value.data)
+                        parentViewmodel.updateCounter(value.data.size)
                     }
                 }
             }
