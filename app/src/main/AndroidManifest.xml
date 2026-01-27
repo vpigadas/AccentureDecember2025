@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ui.screen.ui_sample.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.screen.sample.SampleActivity"
             android:exported="false" />
         <activity

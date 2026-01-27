@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.screen.ui_sample.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_frg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_frg_edit_field_username"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        app:layout_constraintTop_toBottomOf="@id/login_frg_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_frg_edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_frg_edit_field_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@id/login_frg_edit_space">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_frg_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:id="@+id/login_frg_edit_space"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/login_frg_edit_field_username"
+        app:layout_constraintBottom_toBottomOf="@id/login_frg_edit_field_password"
+        android:layout_height="4dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_frg_forgot_password"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_frg_edit_field_password"
+        android:hint="Forgot your Password?" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn_login"
+        android:layout_width="wrap_content"
+        android:minWidth="120dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/green"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_frg_forgot_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn_register"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="120dp"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/login_btn_login"
+        app:layout_constraintTop_toTopOf="@id/login_btn_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
